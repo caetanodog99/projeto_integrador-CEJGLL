@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 1141e8f6255e65545b4c272d2fd52614
+guid: aea5c80926a65984d9735c962cd52571
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7677191780200537609
-    second: jogo_0
+      213: -7452028498181328970
+    second: walk_sideE_Erina_0
+  - first:
+      213: -164222207470511083
+    second: walk_sideE_Erina_1
+  - first:
+      213: 1936707008373867529
+    second: walk_sideE_Erina_2
+  - first:
+      213: -5861123856084835489
+    second: walk_sideE_Erina_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -73,9 +82,9 @@ TextureImporter:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,23 +122,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jogo_0
+      name: walk_sideE_Erina_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1920
-        height: 1080
+        width: 16
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7f1299c50c2257590800000000000000
-      internalID: -7677191780200537609
+      spriteID: 4f3ab02d9e12f1f458b87e9ff901ad0f
+      internalID: -1629597277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_sideE_Erina_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ef2aa80db357c0458b28f1d079a49b6
+      internalID: -1069433324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_sideE_Erina_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68ad1fb654e54c241bd4431d73fe5921
+      internalID: -1872784367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_sideE_Erina_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63c033bd1c0009f4a9b513dabe6003e2
+      internalID: -1392334786
       vertices: []
       indices: 
       edges: []
@@ -138,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: db4412892656ad949b0ba6ef41b291f7
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      jogo_0: -7677191780200537609
+      walk_sideE_Erina_0: -1629597277
+      walk_sideE_Erina_1: -1069433324
+      walk_sideE_Erina_2: -1872784367
+      walk_sideE_Erina_3: -1392334786
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
