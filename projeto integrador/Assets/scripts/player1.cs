@@ -29,28 +29,34 @@ public class player : MonoBehaviour
     {
         //movimenta��o
 
-        float horizontal = 1;//this.joystick.Horizontal;
+        float horizontal = this.joystick.Horizontal;
         float vertical = this.joystick.Vertical;
 
-        Vector2 direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
-        rb.linearVelocity = direction.normalized * speed;
-        //transform.Translate(direction.normalized * speed);
-       // rb.AddForce(direction * speed);
+        Vector2 direcao = new Vector2(horizontal, vertical);
+        rb.linearVelocity = direcao.normalized;
 
-        if (direction.x != 0)
+
+        this.GetComponent<Rigidbody2D>().linearVelocity = direcao * this.speed;
+                                                
+        if (direcao.y != 0 || direcao.x != 0)           //fazer um componente de correndo pra cada direção
         {
-            anim.SetLayerWeight(0, 0);
-            anim.SetLayerWeight(1, 0);
+            anim.SetLayerWeight(0, 1);
+            anim.SetLayerWeight(1, 2);
+            anim.SetLayerWeight(2, 3);
+            anim.SetLayerWeight(3, 0);
+
         }
+     
 
-        if (direction != Vector2.zero)
+
+        if (direcao != Vector2.zero)
         {
-            anim.SetBool("andando", true);
+            anim.SetBool("correndo", false);
         }
         else
         {
-            anim.SetBool("andando", false);
+            anim.SetBool("correndo", true);
         }
 
 
