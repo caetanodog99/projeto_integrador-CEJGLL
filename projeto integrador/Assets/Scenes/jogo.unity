@@ -320,12 +320,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -985895338, guid: 4b3035fc8c23b284c85b4dc10a79101d, type: 3}
+  m_Sprite: {fileID: 2541243813289604951, guid: 3321b94e081886f4b9dfeaeb07e79aa2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.15, y: 0.3}
+  m_Size: {x: 0.13, y: 0.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -359,7 +359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 204359892}
-  speed: 5
+  speed: 8
   joystick: {fileID: 1863911886}
 --- !u!50 &204359892
 Rigidbody2D:
@@ -447,9 +447,9 @@ BoxCollider2D:
   m_Offset: {x: 0.000008374453, y: -0.030679807}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.15, y: 0.3}
-    newSize: {x: 0.15, y: 0.3}
+    pivot: {x: 0.4615385, y: -0.5714286}
+    oldSize: {x: 0.13, y: 0.28}
+    newSize: {x: 0.13, y: 0.28}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0

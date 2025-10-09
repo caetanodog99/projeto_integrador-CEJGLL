@@ -35,31 +35,54 @@ public class player : MonoBehaviour
 
         Vector2 direcao = new Vector2(horizontal, vertical);
         rb.linearVelocity = direcao.normalized;
-
-
         this.GetComponent<Rigidbody2D>().linearVelocity = direcao * this.speed;
-                                                
-        if (direcao.y != 0 || direcao.x != 0)           //fazer um componente de correndo pra cada direção
-        {
-            anim.SetLayerWeight(0, 1);
-            anim.SetLayerWeight(1, 2);
-            anim.SetLayerWeight(2, 3);
-            anim.SetLayerWeight(3, 0);
 
+        if(direcao.x != 0)
+        {
+            ResetLayer();
+            anim.SetLayerWeight(0, 1);
+            if (direcao.x > 0)
+            {
+                ResetLayer();
+                anim.SetLayerWeight(1, 1);
+                sprite.flipX = false;
+            }
+            else if (direcao.x < 0)
+            {
+                ResetLayer();
+                anim.SetLayerWeight(0, 1);
+                sprite.flipX = true;
+            }
         }
-     
+        //direcao.x = 0;
+        if (direcao.y > 0 && direcao.y > direcao.x)
+        {
+            ResetLayer();
+            anim.SetLayerWeight(3, 1);
+        }
+        if (direcao.y < 0 && direcao.y < direcao.x)
+        {
+            ResetLayer();
+            anim.SetLayerWeight(2, 1);
+        }
 
 
         if (direcao != Vector2.zero)
         {
-            anim.SetBool("correndo", false);
+            anim.SetBool("walk", true);
         }
         else
         {
-            anim.SetBool("correndo", true);
+            anim.SetBool("walk", false);
         }
 
+    }
 
-
+    private void ResetLayer()
+    {
+        anim.SetLayerWeight(0, 0);
+        anim.SetLayerWeight(1, 0);
+        anim.SetLayerWeight(2, 0);
+        anim.SetLayerWeight(3, 0);
     }
 }
