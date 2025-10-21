@@ -15,19 +15,32 @@ public class player : MonoBehaviour
 
     private Animator anim;
 
-    private void Start()
+    private int vida;
+
+    public void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
 
+        vida = 5;
+        Debug.Log("vida atual: " + vida);
+    }
+
+    public void ReceberDano()
+    {
+        this.vida--;
+        if (vida <= 0)
+        {
+            Debug.Log("morreu!");
+        }
     }
 
 
-    // Update is called once per frame
+
     private void FixedUpdate()
     {
-        //movimenta��o
+        
 
         float horizontal = this.joystick.Horizontal;
         float vertical = this.joystick.Vertical;
@@ -54,7 +67,7 @@ public class player : MonoBehaviour
                 sprite.flipX = true;
             }
         }
-        //direcao.x = 0;
+        
         if (direcao.y > 0 && direcao.y > direcao.x)
         {
             ResetLayer();
