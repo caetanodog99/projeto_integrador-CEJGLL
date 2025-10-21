@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alvo: {fileID: 204359890}
-  velocidadeMovimento: 2
+  velocidadeMovimento: 5
   rigidbody: {fileID: 4511992}
 --- !u!4 &4511996 stripped
 Transform:
@@ -161,9 +161,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 812087a77e9677646bbb6bede9c4d332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabAtaque: {fileID: 7833718150177801186, guid: 6b43a61841246ca4a9177a9a57fcfd4a, type: 3}
+  prefabAtaque: {fileID: 8385784669204316570, guid: 6b43a61841246ca4a9177a9a57fcfd4a, type: 3}
   pontoDeAtaque: {fileID: 4511996}
-  tempoAtaque: 3
+  tempoAtaque: 2
 --- !u!1 &25084564
 GameObject:
   m_ObjectHideFlags: 0
@@ -35872,7 +35872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5723585585201497974, guid: 19f558f44c65d784182e9efe5b15a764, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5723585585201497974, guid: 19f558f44c65d784182e9efe5b15a764, type: 3}
       propertyPath: m_LocalRotation.w

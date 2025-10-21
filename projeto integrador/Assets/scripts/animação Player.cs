@@ -8,6 +8,7 @@ public class animaçãoPlayer : MonoBehaviour
     [SerializeField]
     private Animator animator;
 
+
    
 
     void Update()

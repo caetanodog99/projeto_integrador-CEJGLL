@@ -1,16 +1,18 @@
 using UnityEngine;
+using System.Collections.Generic;
 using System.Collections;
 
 public class autoDestruir : MonoBehaviour
 {
-    void Start()
+    public IEnumerator DestruirDepois()
     {
-        StartCoroutine(DestruirDepois());
+        yield return new WaitForSeconds(0.5f);
+        Destroy(gameObject);
     }
 
-    IEnumerator DestruirDepois()
+
+    void Update()
     {
-        yield return new WaitForSeconds(1f);
-        Destroy(gameObject);
+        DestruirDepois();
     }
 }

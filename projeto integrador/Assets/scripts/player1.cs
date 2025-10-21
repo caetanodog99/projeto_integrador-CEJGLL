@@ -24,7 +24,7 @@ public class player : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
 
         vida = 5;
-        Debug.Log("vida atual: " + vida);
+       
     }
 
     public void ReceberDano()
@@ -40,7 +40,7 @@ public class player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
+        Debug.Log("vida atual: " + vida);
 
         float horizontal = this.joystick.Horizontal;
         float vertical = this.joystick.Vertical;

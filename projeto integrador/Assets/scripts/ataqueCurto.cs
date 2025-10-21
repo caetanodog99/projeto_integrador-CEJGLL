@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections.Generic;
+using System.Collections;
 
 public class AtaqueCurto : MonoBehaviour
 {
@@ -13,13 +15,21 @@ public class AtaqueCurto : MonoBehaviour
         {
             AtacarCurto();
             proximoAtaque = Time.time + tempoAtaque;
+            
         }
     }
+
+    //public IEnumerator DestruirDepois()
+    //{
+    //    yield return new WaitForSeconds(1f);
+    //    Destroy(gameObject);
+    //}
 
     void AtacarCurto()
     {
         GameObject golpeCurto = Instantiate(prefabAtaque, pontoDeAtaque.position, Quaternion.identity);
         Destroy(golpeCurto, 1f);
+        //DestruirDepois();
     }
 
     void OnTriggerEnter2D(Collider2D collider)
@@ -28,6 +38,7 @@ public class AtaqueCurto : MonoBehaviour
         {
             player jogador = collider.GetComponent<player>();
             jogador.ReceberDano();
+
         }
     }
 }

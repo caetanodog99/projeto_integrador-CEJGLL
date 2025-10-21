@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
 public class inimigo : MonoBehaviour
 {
@@ -7,6 +8,8 @@ public class inimigo : MonoBehaviour
     [SerializeField] private Transform alvo;
     [SerializeField] private float velocidadeMovimento;
     [SerializeField] private Rigidbody2D rigidbody;
+
+    
 
     void Update()
     {
