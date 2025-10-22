@@ -2,11 +2,12 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 
-public class AtaqueCurto : MonoBehaviour
+public class ataquePlayer : MonoBehaviour
 {
     [SerializeField] private GameObject prefabAtaque;
     [SerializeField] private Transform pontoDeAtaque;
-    [SerializeField] private float tempoAtaque = 3f;
+    [SerializeField] private float tempoAtaque = 1f;
+
     private float proximoAtaque = 0f;
 
     void Update()
@@ -15,18 +16,20 @@ public class AtaqueCurto : MonoBehaviour
         {
             AtacarCurto();
             proximoAtaque = Time.time + tempoAtaque;
-            
+
         }
     }
 
 
     void AtacarCurto()
     {
-        Vector3 posicaoAjustada = pontoDeAtaque.position + new Vector3(0f, 0f, 1f);
-        GameObject golpeCurto = Instantiate(prefabAtaque, posicaoAjustada, Quaternion.identity);
-        Destroy(golpeCurto, 1f);
+        
+        Vector2 posicaoAjustada = pontoDeAtaque.position + new Vector3(0f, 5f);
+        Quaternion rotacao = Quaternion.Euler(0f, 0f, 180f);
 
+        GameObject golpeCurto = Instantiate(prefabAtaque, posicaoAjustada, rotacao);
+        Destroy(golpeCurto, 0.5f);
     }
 
-   
+
 }

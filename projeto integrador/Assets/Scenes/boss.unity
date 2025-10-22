@@ -141,8 +141,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 603a21454404941449e3fa8af6b10cee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alvo: {fileID: 204359890}
-  velocidadeMovimento: 0
   rigidbody: {fileID: 4511992}
 --- !u!4 &4511996 stripped
 Transform:
@@ -314,6 +312,7 @@ GameObject:
   - component: {fileID: 204359891}
   - component: {fileID: 204359893}
   - component: {fileID: 204359896}
+  - component: {fileID: 204359897}
   m_Layer: 6
   m_Name: player
   m_TagString: Player
@@ -384,7 +383,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 204359888}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.00022021006, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.00021815034, w: 1}
   m_LocalPosition: {x: 3.5, y: -1.2, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
@@ -501,6 +500,21 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.136, y: 0.28}
   m_EdgeRadius: 0
+--- !u!114 &204359897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204359888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ac24e93ffda8594ea2b321beaf6d8ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabAtaque: {fileID: 6494643138800755272, guid: 9802e572dfb15414d8e0489781c7d03c, type: 3}
+  pontoDeAtaque: {fileID: 204359890}
+  tempoAtaque: 1
 --- !u!1 &206703185
 GameObject:
   m_ObjectHideFlags: 0
@@ -35872,7 +35886,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5723585585201497974, guid: 19f558f44c65d784182e9efe5b15a764, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5723585585201497974, guid: 19f558f44c65d784182e9efe5b15a764, type: 3}
       propertyPath: m_LocalRotation.w
@@ -35909,6 +35923,10 @@ PrefabInstance:
     - target: {fileID: 7842738949417051793, guid: 19f558f44c65d784182e9efe5b15a764, type: 3}
       propertyPath: m_Name
       value: inimigo
+      objectReference: {fileID: 0}
+    - target: {fileID: 7842738949417051793, guid: 19f558f44c65d784182e9efe5b15a764, type: 3}
+      propertyPath: m_TagString
+      value: Inimigo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
