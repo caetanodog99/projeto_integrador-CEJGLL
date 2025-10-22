@@ -162,6 +162,24 @@ MonoBehaviour:
   prefabAtaque: {fileID: 8385784669204316570, guid: 6b43a61841246ca4a9177a9a57fcfd4a, type: 3}
   pontoDeAtaque: {fileID: 4511996}
   tempoAtaque: 2
+--- !u!114 &4512000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4511988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df6c7f967bcecfc42958ffd3781d42ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabAtaque: {fileID: 2207286649369961165, guid: 8f9b4cacdcba70643ba1ae635653b584, type: 3}
+  pontoDeAtaque: {fileID: 4511996}
+  tempoAtaque: 6
+  alvo: {fileID: 204359890}
+  velocidadeMovimento: 2
+  rigidbody: {fileID: 6029854414308316543, guid: 8f9b4cacdcba70643ba1ae635653b584, type: 3}
 --- !u!1 &25084564
 GameObject:
   m_ObjectHideFlags: 0
@@ -35938,6 +35956,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7842738949417051793, guid: 19f558f44c65d784182e9efe5b15a764, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4511997}
+    - targetCorrespondingSourceObject: {fileID: 7842738949417051793, guid: 19f558f44c65d784182e9efe5b15a764, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4512000}
   m_SourcePrefab: {fileID: 100100000, guid: 19f558f44c65d784182e9efe5b15a764, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

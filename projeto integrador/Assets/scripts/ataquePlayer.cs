@@ -14,14 +14,14 @@ public class ataquePlayer : MonoBehaviour
     {
         if (Time.time >= proximoAtaque)
         {
-            AtacarCurto();
+            Atacar();
             proximoAtaque = Time.time + tempoAtaque;
 
         }
     }
 
 
-    void AtacarCurto()
+    void Atacar()
     {
         
         Vector2 posicaoAjustada = pontoDeAtaque.position + new Vector3(0f, 5f);
