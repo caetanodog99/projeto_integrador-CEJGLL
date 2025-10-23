@@ -1,41 +1,42 @@
 using UnityEngine;
-using System.Collections.Generic;
 using System.Collections;
 
 public class ataqueDistante : MonoBehaviour
 {
     [SerializeField] private GameObject prefabAtaque;
     [SerializeField] private Transform pontoDeAtaque;
+    [SerializeField] private Transform alvo; 
     [SerializeField] private float tempoAtaque = 3f;
-    [SerializeField] private Transform alvo;
-    [SerializeField] private float velocidadeMovimento;
-    [SerializeField] private Rigidbody2D rigidbody;
+    [SerializeField] private float velocidade = 5f;
+
     private float proximoAtaque = 0f;
 
     void Update()
     {
         if (Time.time >= proximoAtaque)
         {
-            AtacarCurto();
+            AtacarProjetil();
             proximoAtaque = Time.time + tempoAtaque;
-
         }
-        Vector2 posicaoAlvo = this.alvo.position;
-        Vector2 posicaoAtual = this.transform.position;
-        Vector2 direcao = posicaoAlvo - posicaoAtual;
-        direcao = direcao.normalized;
-
-        this.GetComponent<Rigidbody>().linearVelocity = (this.velocidadeMovimento * direcao);
     }
 
-
-    void AtacarCurto()
+    void AtacarProjetil()
     {
         Vector3 posicaoAjustada = pontoDeAtaque.position + new Vector3(0f, 0f, 1f);
         GameObject golpeCurto = Instantiate(prefabAtaque, posicaoAjustada, Quaternion.identity);
-        Destroy(golpeCurto, 1f);
 
+
+        StartCoroutine(MoverAteAlvo(golpeCurto, alvo.position, velocidade));
     }
 
 
+    IEnumerator MoverAteAlvo(GameObject objeto, Vector3 destino, float velocidade)
+    {
+        while (objeto != null && Vector3.Distance(objeto.transform.position, destino) > 0.1f)
+        {
+            objeto.transform.position = Vector3.MoveTowards(objeto.transform.position, destino, velocidade * Time.deltaTime);
+            yield return null;
+        }
+
+    }
 }
