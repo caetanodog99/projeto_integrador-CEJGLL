@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class player : MonoBehaviour
 {
@@ -10,6 +12,10 @@ public class player : MonoBehaviour
 
     [SerializeField]
     private FixedJoystick joystick;
+
+    [SerializeField] private GameObject painelMorte;
+
+    [SerializeField] private GameObject prefabPlayer;
 
     private SpriteRenderer sprite;
 
@@ -32,8 +38,18 @@ public class player : MonoBehaviour
         this.vida--;
         if (vida <= 0)
         {
-            Debug.Log("morreu!");
+            prefabPlayer.SetActive(false);
+            painelMorte.SetActive(true);
+            Time.timeScale = 0f;
         }
+    }
+
+    public void ReiniciarVida()
+    {
+        Vector2 posicao = new Vector2(3.5f, -1.2f);
+        prefabPlayer.transform.position = posicao;
+        prefabPlayer.SetActive(true);
+        this.vida = 5;
     }
 
 

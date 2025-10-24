@@ -40,4 +40,9 @@ public class inimigo : MonoBehaviour
     {
         Destroy(this.gameObject);
     }
+
+    public void ReiniciarVida()
+    {
+        this.vida = 5;
+    }
 }
