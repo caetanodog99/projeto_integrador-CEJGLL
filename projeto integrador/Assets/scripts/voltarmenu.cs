@@ -5,21 +5,35 @@ using System.Collections.Generic;
 
 public class voltarmenu : MonoBehaviour
 {
-    [SerializeField] private string telabar;
-    [SerializeField] private string menuinicial;
-    [SerializeField] private string telaboss;
+    [SerializeField] private string telaBoss;
+    [SerializeField] private string telaBar;
+    [SerializeField] private GameObject painelOpcoes;
+    [SerializeField] private GameObject joystick;
 
-    public void voltar()
+    public void VoltarBar()
     {
-        SceneManager.UnloadScene(telabar);
-        SceneManager.LoadScene(menuinicial);
-        
+        SceneManager.UnloadScene(telaBoss);
+        SceneManager.LoadScene(telaBar);
+        Time.timeScale = 1f;
     }
 
-    public void voltarBar()
+    public void Aopcoes()
     {
-        SceneManager.UnloadScene(telaboss);
-        SceneManager.LoadScene(telabar);
+        joystick.SetActive(false);
+        painelOpcoes.SetActive(true);
+        Time.timeScale = 0f;
+    }
 
+    public void Fopcoes()
+    {
+        painelOpcoes.SetActive(false);
+        joystick.SetActive(true);
+        Time.timeScale = 1f;
+    }
+
+    public void sair()
+    {
+        Debug.Log("Sair do jogo");
+        Application.Quit();
     }
 }

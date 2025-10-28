@@ -5,10 +5,9 @@ using System.Collections;
 public class inimigo : MonoBehaviour
 {
 
-    //[SerializeField] private Transform alvo;
-    //[SerializeField] private float velocidadeMovimento;
     [SerializeField] private Rigidbody2D rigidbody;
     private int vida;
+    [SerializeField] private GameObject painelVitoria;
 
     public void Start()
     {
@@ -18,12 +17,6 @@ public class inimigo : MonoBehaviour
     void Update()
     {
         Debug.Log("a vida do boss: " + vida);
-        //Vector2 posicaoAlvo = this.alvo.position;
-        //Vector2 posicaoAtual = this.transform.position;
-        //Vector2 direcao = posicaoAlvo - posicaoAtual;
-        //direcao = direcao.normalized;
-
-        //this.rigidbody.linearVelocity = (this.velocidadeMovimento * direcao);
     }
 
     public void ReceberDano()
@@ -31,8 +24,9 @@ public class inimigo : MonoBehaviour
         this.vida--;
         if (vida <= 0)
         {
-            Debug.Log("o boss ja era!");
+            painelVitoria.SetActive(true);
             Destruir(true);
+            Time.timeScale = 0f;
         }
     }
 
