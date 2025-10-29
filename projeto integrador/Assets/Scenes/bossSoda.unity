@@ -1061,22 +1061,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3655816551244786305, guid: 309006d06edff9c4681fa7acf9564876, type: 3}
-      propertyPath: rigidbody
+    - target: {fileID: 3332295782654934820, guid: 309006d06edff9c4681fa7acf9564876, type: 3}
+      propertyPath: alvo
       value: 
-      objectReference: {fileID: 255096323}
+      objectReference: {fileID: 1828638616}
+    - target: {fileID: 3332295782654934820, guid: 309006d06edff9c4681fa7acf9564876, type: 3}
+      propertyPath: pontoSpawnLata
+      value: 
+      objectReference: {fileID: 219154134}
     - target: {fileID: 3655816551244786305, guid: 309006d06edff9c4681fa7acf9564876, type: 3}
       propertyPath: painelVitoria
       value: 
       objectReference: {fileID: 1790668814}
-    - target: {fileID: 3764590978945493090, guid: 309006d06edff9c4681fa7acf9564876, type: 3}
-      propertyPath: prefabAtaque
-      value: 
-      objectReference: {fileID: 6858528127372958543, guid: 550ca5ac285221e49bb86d8d3385e97f, type: 3}
-    - target: {fileID: 4415675129005078617, guid: 309006d06edff9c4681fa7acf9564876, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 6733364479785803911, guid: 309006d06edff9c4681fa7acf9564876, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.6351366
@@ -1141,134 +1137,26 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.7169812
       objectReference: {fileID: 0}
-    - target: {fileID: 7660584407515535172, guid: 309006d06edff9c4681fa7acf9564876, type: 3}
-      propertyPath: alvo
-      value: 
-      objectReference: {fileID: 2843367934535793191}
-    - target: {fileID: 7660584407515535172, guid: 309006d06edff9c4681fa7acf9564876, type: 3}
-      propertyPath: tempoAtaque
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7660584407515535172, guid: 309006d06edff9c4681fa7acf9564876, type: 3}
-      propertyPath: prefabAtaque
-      value: 
-      objectReference: {fileID: 5412428567018400547, guid: 2c78f4032cda87f4981254cb1b1a82a5, type: 3}
     - target: {fileID: 8506169810934481144, guid: 309006d06edff9c4681fa7acf9564876, type: 3}
       propertyPath: m_Name
       value: SodaBolaMan
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4415675129005078617, guid: 309006d06edff9c4681fa7acf9564876, type: 3}
-    - {fileID: 3764590978945493090, guid: 309006d06edff9c4681fa7acf9564876, type: 3}
-    - {fileID: 7660584407515535172, guid: 309006d06edff9c4681fa7acf9564876, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8506169810934481144, guid: 309006d06edff9c4681fa7acf9564876, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 255096324}
-    - targetCorrespondingSourceObject: {fileID: 8506169810934481144, guid: 309006d06edff9c4681fa7acf9564876, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 255096330}
-    - targetCorrespondingSourceObject: {fileID: 8506169810934481144, guid: 309006d06edff9c4681fa7acf9564876, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 255096333}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 309006d06edff9c4681fa7acf9564876, type: 3}
---- !u!1 &255096322 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8506169810934481144, guid: 309006d06edff9c4681fa7acf9564876, type: 3}
-  m_PrefabInstance: {fileID: 255096321}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &255096323 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 2074960063855329193, guid: 309006d06edff9c4681fa7acf9564876, type: 3}
-  m_PrefabInstance: {fileID: 255096321}
-  m_PrefabAsset: {fileID: 0}
---- !u!70 &255096324
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 255096322}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
-  m_Direction: 0
 --- !u!114 &255096327 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3655816551244786305, guid: 309006d06edff9c4681fa7acf9564876, type: 3}
   m_PrefabInstance: {fileID: 255096321}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 255096322}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 603a21454404941449e3fa8af6b10cee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &255096329 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6733364479785803911, guid: 309006d06edff9c4681fa7acf9564876, type: 3}
-  m_PrefabInstance: {fileID: 255096321}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &255096330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 255096322}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3a481f040fc63e458d120083572f25b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabAtaque: {fileID: 6858528127372958543, guid: 550ca5ac285221e49bb86d8d3385e97f, type: 3}
-  pontoDeAtaque: {fileID: 255096329}
-  tempoAtaque: 3
---- !u!114 &255096333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 255096322}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff492951c8508104f90fc69fa6b97a7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabAtaque: {fileID: 5412428567018400547, guid: 2c78f4032cda87f4981254cb1b1a82a5, type: 3}
-  pontoSpawnLata: {fileID: 219154134}
-  alvo: {fileID: 1828638616}
-  tempoAtaque: 5
-  velocidade: 10
 --- !u!1 &260791902
 GameObject:
   m_ObjectHideFlags: 0
@@ -38590,11 +38478,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cf6195ca1344cd47912f97603ad8111, type: 3}
---- !u!4 &2843367934535793191 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 345889314528853514, guid: 5cf6195ca1344cd47912f97603ad8111, type: 3}
-  m_PrefabInstance: {fileID: 2843367934535793190}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

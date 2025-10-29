@@ -11,7 +11,7 @@ public class inimigo : MonoBehaviour
 
     public void Start()
     {
-        vida = 5;
+        vida = 20;
     }
 
     void Update()
@@ -30,6 +30,16 @@ public class inimigo : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.CompareTag("Player"))
+        {
+            player jogador = collider.GetComponent<player>();
+            jogador.ReceberDano();
+
+        }
+    }
+
     private void Destruir(bool derrotado)
     {
         Destroy(this.gameObject);
@@ -37,6 +47,6 @@ public class inimigo : MonoBehaviour
 
     public void ReiniciarVida()
     {
-        this.vida = 5;
+        this.vida = 20;
     }
 }
