@@ -1,15 +1,21 @@
 using UnityEngine;
 using System.Collections;
+using Unity.Collections.LowLevel.Unsafe;
 
-public class ataqueDistante : MonoBehaviour
+public class ataqueLata : MonoBehaviour
 {
     [SerializeField] private GameObject prefabAtaque;
-    [SerializeField] private Transform pontoDeAtaque;
-    [SerializeField] private Transform alvo; 
+    [SerializeField] private Transform pontoSpawnLata;
+    [SerializeField] private Transform alvo;
     [SerializeField] private float tempoAtaque = 3f;
     [SerializeField] private float velocidade = 5f;
 
     private float proximoAtaque = 0f;
+
+    private void Start()
+    {
+
+    }
 
     void Update()
     {
@@ -18,15 +24,22 @@ public class ataqueDistante : MonoBehaviour
             AtacarProjetil();
             proximoAtaque = Time.time + tempoAtaque;
         }
+
+
+
     }
 
     void AtacarProjetil()
     {
-        Vector3 posicaoAjustada = pontoDeAtaque.position + new Vector3(0f, 0f, 1f);
-        GameObject golpeDistante = Instantiate(prefabAtaque, posicaoAjustada, Quaternion.identity);
+        Vector2 posicaoMax = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
+        Vector2 posicaoMin = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
+        float posicaoX = Random.Range(posicaoMin.x, posicaoMax.x);
+        Vector3 posicaoAjustada = pontoSpawnLata.position + new Vector3(posicaoX, 0f, 1f);
+        GameObject golpeLata = Instantiate(prefabAtaque, posicaoAjustada, Quaternion.identity);
 
 
-        StartCoroutine(MoverAteAlvo(golpeDistante, alvo.position, velocidade));
+
+        StartCoroutine(MoverAteAlvo(golpeLata, alvo.position, velocidade));
     }
 
 
