@@ -46,7 +46,7 @@ public class player : MonoBehaviour
 
     public void ReiniciarVida()
     {
-        Vector2 posicao = new Vector2(3.5f, -1.2f);
+        Vector2 posicao = new Vector2(3.25f, -9f);
         prefabPlayer.transform.position = posicao;
         prefabPlayer.SetActive(true);
         this.vida = 5;
