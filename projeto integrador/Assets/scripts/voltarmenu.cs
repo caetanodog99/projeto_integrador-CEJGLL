@@ -12,7 +12,7 @@ public class voltarmenu : MonoBehaviour
 
     public void VoltarBar()
     {
-        SceneManager.UnloadScene(telaBoss);
+        SceneManager.UnloadSceneAsync(telaBoss);
         SceneManager.LoadScene(telaBar);
         Time.timeScale = 1f;
     }

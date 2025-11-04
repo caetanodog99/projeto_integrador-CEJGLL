@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class player : MonoBehaviour
 {
@@ -23,19 +24,25 @@ public class player : MonoBehaviour
 
     private int vida;
 
+    [SerializeField] private Image[] coracao;
+    [SerializeField] private Sprite coracaoCheio;
+    [SerializeField] private Sprite coracaoVazio;
+
+
     public void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
 
-        vida = 5;
+        vida = 100;
        
     }
 
     public void ReceberDano()
     {
         this.vida--;
+        PerderCoracao();
         if (vida <= 0)
         {
             prefabPlayer.SetActive(false);
@@ -49,14 +56,18 @@ public class player : MonoBehaviour
         Vector2 posicao = new Vector2(3.25f, -9f);
         prefabPlayer.transform.position = posicao;
         prefabPlayer.SetActive(true);
-        this.vida = 5;
+        this.vida = 3;
+        coracao[0].sprite = coracaoCheio;
+        coracao[1].sprite = coracaoCheio;
+        coracao[2].sprite = coracaoCheio;
+
     }
 
 
 
     private void FixedUpdate()
     {
-        Debug.Log("vida atual: " + vida);
+        
 
         float horizontal = this.joystick.Horizontal;
         float vertical = this.joystick.Vertical;
@@ -105,6 +116,22 @@ public class player : MonoBehaviour
             anim.SetBool("walk", false);
         }
 
+    }
+
+    void PerderCoracao()
+    {
+        for (int i = 0; i < coracao.Length; i++)
+        {
+            if(i < vida)
+            {
+                coracao[i].sprite = coracaoCheio;
+            }
+            else
+            {
+                coracao[i].sprite = coracaoVazio;
+            }
+
+        }
     }
 
     private void ResetLayer()

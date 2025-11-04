@@ -8,15 +8,18 @@ public class inimigo : MonoBehaviour
     [SerializeField] private Rigidbody2D rigidbody;
     private int vida;
     [SerializeField] private GameObject painelVitoria;
+    [SerializeField] public AudioSource somMorte;
+
+
 
     public void Start()
     {
-        vida = 20;
+        vida = 1;
     }
 
     void Update()
     {
-        Debug.Log("a vida do boss: " + vida);
+        Debug.Log("vida do boss: " + vida);
     }
 
     public void ReceberDano()
@@ -24,6 +27,7 @@ public class inimigo : MonoBehaviour
         this.vida--;
         if (vida <= 0)
         {
+            somMorte.Play();
             painelVitoria.SetActive(true);
             Destruir(true);
             Time.timeScale = 0f;
@@ -42,11 +46,12 @@ public class inimigo : MonoBehaviour
 
     private void Destruir(bool derrotado)
     {
+
         Destroy(this.gameObject);
     }
 
     public void ReiniciarVida()
     {
-        this.vida = 20;
+        this.vida = 1;
     }
 }

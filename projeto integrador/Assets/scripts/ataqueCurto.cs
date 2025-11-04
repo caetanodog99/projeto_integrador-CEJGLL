@@ -22,7 +22,7 @@ public class AtaqueCurto : MonoBehaviour
 
     void AtacarCurto()
     {
-        Vector3 posicaoAjustada = pontoDeAtaque.position + new Vector3(0f,1f, 1f);
+        Vector3 posicaoAjustada = pontoDeAtaque.position + new Vector3(0f,4f, 1f);
         GameObject golpeCurto = Instantiate(prefabAtaque, posicaoAjustada, Quaternion.identity);
         Destroy(golpeCurto, 1f);
 
