@@ -7,6 +7,7 @@ public class AtaqueCurto : MonoBehaviour
     [SerializeField] private GameObject prefabAtaque;
     [SerializeField] private Transform pontoDeAtaque;
     [SerializeField] private float tempoAtaque = 3f;
+    [SerializeField] private AudioSource somAtaqueCurto;
     private float proximoAtaque = 0f;
 
     void Update()
@@ -23,6 +24,7 @@ public class AtaqueCurto : MonoBehaviour
     void AtacarCurto()
     {
         Vector3 posicaoAjustada = pontoDeAtaque.position + new Vector3(0f,4f, 1f);
+        somAtaqueCurto.Play();
         GameObject golpeCurto = Instantiate(prefabAtaque, posicaoAjustada, Quaternion.identity);
         Destroy(golpeCurto, 1f);
 

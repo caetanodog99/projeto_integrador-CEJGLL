@@ -9,6 +9,7 @@ public class ataqueLata : MonoBehaviour
     [SerializeField] private Transform alvo;
     [SerializeField] private float tempoAtaque = 3f;
     [SerializeField] private float velocidade = 5f;
+    [SerializeField] private AudioSource somAtaqueDistante;
 
     private float proximoAtaque = 0f;
 
@@ -35,6 +36,7 @@ public class ataqueLata : MonoBehaviour
         Vector2 posicaoMin = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
         float posicaoX = Random.Range(posicaoMin.x, posicaoMax.x);
         Vector3 posicaoAjustada = pontoSpawnLata.position + new Vector3(posicaoX, 0f, 1f);
+        somAtaqueDistante.Play();
         GameObject golpeLata = Instantiate(prefabAtaque, posicaoAjustada, Quaternion.identity);
 
 

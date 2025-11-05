@@ -8,6 +8,7 @@ public class ataqueDistante : MonoBehaviour
     [SerializeField] private Transform alvo;
     [SerializeField] private float tempoAtaque = 3f;
     [SerializeField] private float velocidade = 5f;
+    [SerializeField] private AudioSource somAtaqueDistante;
 
     private float proximoAtaque = 0f;
 
@@ -29,6 +30,7 @@ public class ataqueDistante : MonoBehaviour
     void AtacarProjetil()
     {
         Vector3 posicaoAjustada = pontoDeAtaque.position + new Vector3(0f, 0f, 1f);
+        somAtaqueDistante.Play();
         GameObject golpeDistante = Instantiate(prefabAtaque, posicaoAjustada, Quaternion.identity);
 
         StartCoroutine(MoverAteAlvo(golpeDistante, alvo.position, velocidade));

@@ -9,12 +9,10 @@ public class inimigo : MonoBehaviour
     private int vida;
     [SerializeField] private GameObject painelVitoria;
     [SerializeField] public AudioSource somMorte;
-
-
-
+    [SerializeField] public AudioSource somDano;
     public void Start()
     {
-        vida = 1;
+        vida = 10;
     }
 
     void Update()
@@ -24,6 +22,7 @@ public class inimigo : MonoBehaviour
 
     public void ReceberDano()
     {
+        somDano.Play();
         this.vida--;
         if (vida <= 0)
         {
@@ -52,6 +51,6 @@ public class inimigo : MonoBehaviour
 
     public void ReiniciarVida()
     {
-        this.vida = 1;
+        this.vida = 10;
     }
 }

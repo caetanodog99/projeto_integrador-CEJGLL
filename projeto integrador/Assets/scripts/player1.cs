@@ -28,14 +28,14 @@ public class player : MonoBehaviour
     [SerializeField] private Sprite coracaoCheio;
     [SerializeField] private Sprite coracaoVazio;
 
-
+    [SerializeField] private AudioSource somMorte;
     public void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
 
-        vida = 100;
+        vida = 3;
        
     }
 
@@ -45,9 +45,10 @@ public class player : MonoBehaviour
         PerderCoracao();
         if (vida <= 0)
         {
+            somMorte.Play();
             prefabPlayer.SetActive(false);
             painelMorte.SetActive(true);
-            Time.timeScale = 0f;
+            Time.timeScale = 0f; 
         }
     }
 
