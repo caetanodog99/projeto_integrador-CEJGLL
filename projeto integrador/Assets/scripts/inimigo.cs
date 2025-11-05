@@ -12,7 +12,7 @@ public class inimigo : MonoBehaviour
     [SerializeField] public AudioSource somDano;
     public void Start()
     {
-        vida = 10;
+        vida = 15;
     }
 
     void Update()
@@ -27,8 +27,14 @@ public class inimigo : MonoBehaviour
         if (vida <= 0)
         {
             somMorte.Play();
-            painelVitoria.SetActive(true);
+            StartCoroutine(ExecutarDepoisDaMorte());
+        }
+        IEnumerator ExecutarDepoisDaMorte()
+        {
+            yield return new WaitForSeconds(1.5f);
+
             Destruir(true);
+            painelVitoria.SetActive(true);
             Time.timeScale = 0f;
         }
     }
@@ -51,6 +57,6 @@ public class inimigo : MonoBehaviour
 
     public void ReiniciarVida()
     {
-        this.vida = 10;
+        this.vida = 15;
     }
 }

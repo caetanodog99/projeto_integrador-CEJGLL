@@ -29,6 +29,8 @@ public class player : MonoBehaviour
     [SerializeField] private Sprite coracaoVazio;
 
     [SerializeField] private AudioSource somMorte;
+    [SerializeField] private AudioSource somPatins;
+    
     public void Start()
     {
         anim = GetComponent<Animator>();
@@ -43,12 +45,19 @@ public class player : MonoBehaviour
     {
         this.vida--;
         PerderCoracao();
+
         if (vida <= 0)
         {
             somMorte.Play();
+            StartCoroutine(ExecutarDepoisDaMorte());
+        }
+        IEnumerator ExecutarDepoisDaMorte()
+        {
+            yield return new WaitForSeconds(1.5f);
+
             prefabPlayer.SetActive(false);
             painelMorte.SetActive(true);
-            Time.timeScale = 0f; 
+            Time.timeScale = 0f;
         }
     }
 
@@ -110,10 +119,12 @@ public class player : MonoBehaviour
 
         if (direcao != Vector2.zero)
         {
+            
             anim.SetBool("walk", true);
         }
         else
         {
+            somPatins.Play();
             anim.SetBool("walk", false);
         }
 

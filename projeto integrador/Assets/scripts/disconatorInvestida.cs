@@ -6,6 +6,7 @@ public class disconatorInvestida : MonoBehaviour
     [SerializeField] private Transform alvo;
     [SerializeField] private float tempoAtaque = 3f;
     [SerializeField] private float velocidade = 5f;
+    [SerializeField] private AudioSource somInvestida;
 
     private float proximoAtaque = 0f;
     private Vector3 posicaoOriginal;
@@ -38,6 +39,7 @@ public class disconatorInvestida : MonoBehaviour
     {
         while (Vector3.Distance(transform.position, destino) > 0.1f)
         {
+            somInvestida.Play();
             transform.position = Vector3.MoveTowards(transform.position, destino, velocidade * Time.deltaTime);
             yield return null;
         }
