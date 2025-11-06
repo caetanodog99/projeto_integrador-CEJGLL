@@ -456,6 +456,7 @@ MonoBehaviour:
   coracaoVazio: {fileID: 0}
   somMorte: {fileID: 0}
   somPatins: {fileID: 204359897}
+  somReceberDano: {fileID: 0}
 --- !u!50 &204359892
 Rigidbody2D:
   serializedVersion: 5
@@ -564,7 +565,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: dce302880fd5c914fbed36579c0325bf, type: 3}
   m_Resource: {fileID: 8300000, guid: dce302880fd5c914fbed36579c0325bf, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.869
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0

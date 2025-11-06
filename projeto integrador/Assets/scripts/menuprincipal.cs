@@ -9,6 +9,8 @@ public class menuprincipal : MonoBehaviour
     [SerializeField] private string telacreditos;
     [SerializeField] private GameObject painelMenuInicial;
     [SerializeField] private GameObject painelOpcoes;
+    [SerializeField] private GameObject painelCarregando;
+
     [SerializeField] private AudioSource somPausar;
     [SerializeField] private AudioSource somDespausar;
     [SerializeField] private AudioSource somInteração;
@@ -18,7 +20,13 @@ public class menuprincipal : MonoBehaviour
     public void jogar()
     {
         somIniciar.Play();
-        SceneManager.LoadScene(telajogo); 
+        painelCarregando.SetActive(true);
+        StartCoroutine(Walkman());
+    }
+    IEnumerator Walkman()
+    {
+        yield return new WaitForSeconds(2.5f);
+        SceneManager.LoadScene(telajogo);
     }
 
     public void Aopcoes()

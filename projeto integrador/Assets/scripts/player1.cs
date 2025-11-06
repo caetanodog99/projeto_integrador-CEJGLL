@@ -30,7 +30,8 @@ public class player : MonoBehaviour
 
     [SerializeField] private AudioSource somMorte;
     [SerializeField] private AudioSource somPatins;
-    
+    [SerializeField] private AudioSource somReceberDano;
+
     public void Start()
     {
         anim = GetComponent<Animator>();
@@ -44,6 +45,7 @@ public class player : MonoBehaviour
     public void ReceberDano()
     {
         this.vida--;
+        somReceberDano.Play();
         PerderCoracao();
 
         if (vida <= 0)
