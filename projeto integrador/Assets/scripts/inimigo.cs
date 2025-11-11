@@ -12,7 +12,7 @@ public class inimigo : MonoBehaviour
     [SerializeField] public AudioSource somDano;
     public void Start()
     {
-        vida = 15;
+        vida = 7;
     }
 
     void Update()
@@ -57,6 +57,6 @@ public class inimigo : MonoBehaviour
 
     public void ReiniciarVida()
     {
-        this.vida = 15;
+        this.vida = 7;
     }
 }

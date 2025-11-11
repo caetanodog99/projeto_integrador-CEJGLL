@@ -50,6 +50,15 @@ public class npcDialogo : MonoBehaviour
         SceneManager.LoadScene(telaBoss);
     }
 
+    public void BotaoVoltar()
+    {
+        somInteracao.Play();
+        telaDialogoNPC.SetActive(false);
+        telaDialogoBecca.SetActive(false);
+        telaDialogoBeccaLivro.SetActive(false);
+        telaDialogoNPCLivro.SetActive(false);
+        Time.timeScale = 1f;
+    }
 
     public void AtivarTexto()
     {
