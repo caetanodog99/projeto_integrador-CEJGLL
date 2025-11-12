@@ -23,7 +23,7 @@ public class socoSoda : MonoBehaviour
 
     void AtacarCurto()
     {
-        Vector3 posicaoAjustada = pontoDeAtaque.position + new Vector3(0f, -4f, 1f);
+        Vector3 posicaoAjustada = pontoDeAtaque.position + new Vector3(0f, -0.67f, 1f);
         somAtaqueSoco.Play();
         GameObject golpeCurto = Instantiate(prefabAtaque, posicaoAjustada, Quaternion.identity);
         Destroy(golpeCurto, 1f);
