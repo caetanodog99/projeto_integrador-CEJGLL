@@ -7,6 +7,7 @@ public class disconatorInvestida : MonoBehaviour
     [SerializeField] private float tempoAtaque = 3f;
     [SerializeField] private float velocidade = 5f;
     [SerializeField] private AudioSource somInvestida;
+    [SerializeField] private Animator animator;
 
     private float proximoAtaque = 0f;
     private Vector3 posicaoOriginal;
@@ -21,7 +22,12 @@ public class disconatorInvestida : MonoBehaviour
         if (Time.time >= proximoAtaque)
         {
             StartCoroutine(Investida());
+            animator.SetBool("investida", true);
             proximoAtaque = Time.time + tempoAtaque;
+        }
+        else
+        {
+            animator.SetBool("investida", false);
         }
     }
 

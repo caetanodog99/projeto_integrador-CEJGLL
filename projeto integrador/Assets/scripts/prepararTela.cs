@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class prepararTela : MonoBehaviour
 {
@@ -8,10 +9,6 @@ public class prepararTela : MonoBehaviour
     [SerializeField] private GameObject telaPreparese;
     private float intervalo = 1.1f;
 
-    void Awake()
-    {
-        Time.timeScale = 0f;
-    }
 
     private void Start()
     {
@@ -36,8 +33,6 @@ public class prepararTela : MonoBehaviour
 
         textoTempo.text = "Já!";
         yield return new WaitForSecondsRealtime(intervalo);
-
-        telaPreparese.SetActive(false);
         Time.timeScale = 1f;
     }
 }

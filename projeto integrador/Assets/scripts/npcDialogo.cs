@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class npcDialogo : MonoBehaviour
 {
@@ -7,8 +8,9 @@ public class npcDialogo : MonoBehaviour
     [SerializeField] private GameObject telaDialogoBecca;
     [SerializeField] private GameObject telaDialogoNPCLivro;
     [SerializeField] private GameObject telaDialogoBeccaLivro;
-    [SerializeField] private string telaBoss;
     [SerializeField] private AudioSource somInteracao;
+    [SerializeField] private GameObject telaPreparese;
+    [SerializeField] private string telaBoss;
     void Start()
     {
         
@@ -44,9 +46,13 @@ public class npcDialogo : MonoBehaviour
     public void BotaoBatalhar()
     {
         somInteracao.Play();
-        telaDialogoNPC.SetActive(false);
-        telaDialogoBecca.SetActive(false);
-        Time.timeScale = 1f;
+        telaPreparese.SetActive(true);
+        StartCoroutine(CarregarCena());
+    }
+
+    private IEnumerator CarregarCena()
+    {
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(telaBoss);
     }
 

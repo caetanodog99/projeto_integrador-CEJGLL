@@ -9,6 +9,7 @@ public class ataqueDistante : MonoBehaviour
     [SerializeField] private float tempoAtaque = 3f;
     [SerializeField] private float velocidade = 5f;
     [SerializeField] private AudioSource somAtaqueDistante;
+    [SerializeField] private Animator animator;
 
     private float proximoAtaque = 0f;
 
@@ -23,7 +24,12 @@ public class ataqueDistante : MonoBehaviour
         if (Time.time >= proximoAtaque)
         {
             AtacarProjetil();
+            animator.SetBool("tiro", true);
             proximoAtaque = Time.time + tempoAtaque;
+        }
+        else
+        {
+            animator.SetBool("tiro", false);
         }
     }
 
