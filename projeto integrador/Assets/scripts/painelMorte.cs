@@ -1,4 +1,7 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class painelMorte : MonoBehaviour
 {
@@ -7,15 +10,22 @@ public class painelMorte : MonoBehaviour
     [SerializeField] private GameObject painelVoceMorreu;
     [SerializeField] private GameObject painelJoystick;
     [SerializeField] private GameObject painelCoracoes;
-    [SerializeField] private Animator animator;
+    [SerializeField] private AudioSource somMorte;
 
     void Update()
     {
         if (painelVoceMorreu)
         {
-            animator.Play("tela_morte");
+            somMorte.Play();
             painelJoystick.SetActive(false);
             painelCoracoes.SetActive(false);
+            StartCoroutine(tempoPraZerar());
+        }
+        IEnumerator  tempoPraZerar()
+        {
+            yield return new WaitForSeconds(1.2f);
+            Time.timeScale = 0f;
+
         }
     }
     

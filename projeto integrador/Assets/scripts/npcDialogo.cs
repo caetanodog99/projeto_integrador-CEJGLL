@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class npcDialogo : MonoBehaviour
-{
+{   
     [SerializeField] private GameObject telaDialogoNPC;
     [SerializeField] private GameObject telaDialogoBecca;
     [SerializeField] private GameObject telaDialogoNPCLivro;
@@ -11,6 +11,7 @@ public class npcDialogo : MonoBehaviour
     [SerializeField] private AudioSource somInteracao;
     [SerializeField] private GameObject telaPreparese;
     [SerializeField] private string telaBoss;
+    [SerializeField] private Animator animator;
     void Start()
     {
         
@@ -77,8 +78,17 @@ public class npcDialogo : MonoBehaviour
     {
         if (collider.CompareTag("Player"))
         {
-            AtivarTexto();
-
+            StartCoroutine(TextoDelay());
+            animator.SetBool("idle", true);
         }
+        else
+        {
+            animator.SetBool("idle", false);
+        }
+    }
+    IEnumerator TextoDelay()
+    {
+        yield return new WaitForSeconds(1f);
+        AtivarTexto();
     }
 }

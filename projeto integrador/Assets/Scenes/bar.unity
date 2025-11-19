@@ -399,6 +399,7 @@ GameObject:
   - component: {fileID: 63960242}
   - component: {fileID: 63960241}
   - component: {fileID: 63960246}
+  - component: {fileID: 63960247}
   m_Layer: 0
   m_Name: Aline Enadam
   m_TagString: Untagged
@@ -425,6 +426,7 @@ MonoBehaviour:
   somInteracao: {fileID: 63960246}
   telaPreparese: {fileID: 1911090667}
   telaBoss: bossDisconator
+  animator: {fileID: 63960247}
 --- !u!61 &63960242
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -459,17 +461,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.17}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.4666667, y: -0.03448276}
+    oldSize: {x: 0.15, y: 0.29}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.48, y: 1.24}
+  m_Size: {x: 0.22, y: 0.37}
   m_EdgeRadius: 0
 --- !u!50 &63960243
 Rigidbody2D:
@@ -542,8 +544,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.5548692, g: 0, b: 1, a: 1}
+  m_Sprite: {fileID: 3253253770481829796, guid: 6057288ed70eb7648a7e0451928f1adf, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -562,9 +564,9 @@ Transform:
   m_GameObject: {fileID: 63960240}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.495974, y: 12.483847, z: 0}
-  m_LocalScale: {x: 1.3696, y: 2.185849, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -13.574883, y: 12.057031, z: 0}
+  m_LocalScale: {x: 9.467251, y: 9.107049, z: 4.1663666}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -665,6 +667,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &63960247
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63960240}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fb0e0d7c3cf8c0447aeb7d07ce8ba1d1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &118501197
 GameObject:
   m_ObjectHideFlags: 0
@@ -2963,6 +2987,7 @@ MonoBehaviour:
   somInteracao: {fileID: 280201957}
   telaPreparese: {fileID: 1911090667}
   telaBoss: bossTiranofax
+  animator: {fileID: 0}
 --- !u!82 &280201957
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13602,6 +13627,7 @@ MonoBehaviour:
   somInteracao: {fileID: 1342221183}
   telaPreparese: {fileID: 1911090667}
   telaBoss: bossSoda
+  animator: {fileID: 0}
 --- !u!61 &1342221179
 BoxCollider2D:
   m_ObjectHideFlags: 0

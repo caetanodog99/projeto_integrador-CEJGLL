@@ -28,7 +28,7 @@ public class player : MonoBehaviour
     [SerializeField] private Sprite coracaoCheio;
     [SerializeField] private Sprite coracaoVazio;
 
-    [SerializeField] private AudioSource somMorte;
+
     [SerializeField] private AudioSource somPatins;
     [SerializeField] private AudioSource somReceberDano;
 
@@ -50,17 +50,11 @@ public class player : MonoBehaviour
 
         if (vida <= 0)
         {
-            somMorte.Play();
-            StartCoroutine(ExecutarDepoisDaMorte());
-        }
-        IEnumerator ExecutarDepoisDaMorte()
-        {
-            yield return new WaitForSeconds(1.5f);
-
             prefabPlayer.SetActive(false);
             painelMorte.SetActive(true);
-            Time.timeScale = 0f;
         }
+
+       
     }
 
     public void ReiniciarVida()
