@@ -5,6 +5,7 @@ using System.Collections;
 public class npcDialogo : MonoBehaviour
 {   
     [SerializeField] private GameObject telaDialogoNPC;
+    [SerializeField] private GameObject telaDialogoAcessibilidade;
     [SerializeField] private GameObject telaDialogoBecca;
     [SerializeField] private GameObject telaDialogoNPCLivro;
     [SerializeField] private GameObject telaDialogoBeccaLivro;
@@ -12,14 +13,13 @@ public class npcDialogo : MonoBehaviour
     [SerializeField] private GameObject telaPreparese;
     [SerializeField] private string telaBoss;
     [SerializeField] private Animator animator;
-    void Start()
-    {
-        
-    }
 
-    void Update()
+
+    public void BotaoProximoAcessibilidade()
     {
-        
+        somInteracao.Play();
+        telaDialogoAcessibilidade.SetActive(false);
+        telaDialogoBecca.SetActive(true);
     }
 
     public void BotaoProximoBecca() 
@@ -64,13 +64,14 @@ public class npcDialogo : MonoBehaviour
         telaDialogoBecca.SetActive(false);
         telaDialogoBeccaLivro.SetActive(false);
         telaDialogoNPCLivro.SetActive(false);
+        telaDialogoAcessibilidade.SetActive(false);
         Time.timeScale = 1f;
     }
 
     public void AtivarTexto()
     {
         somInteracao.Play();
-        telaDialogoBecca.SetActive(true);
+        telaDialogoAcessibilidade.SetActive(true);
         Time.timeScale = 0f;
     }
 
