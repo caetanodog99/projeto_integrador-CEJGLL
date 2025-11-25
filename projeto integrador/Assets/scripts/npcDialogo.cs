@@ -14,6 +14,10 @@ public class npcDialogo : MonoBehaviour
     [SerializeField] private string telaBoss;
     [SerializeField] private Animator animator;
 
+    void Start()
+    {
+        Time.timeScale = 1f;
+    }
 
     public void BotaoProximoAcessibilidade()
     {

@@ -12,12 +12,12 @@ public class inimigo : MonoBehaviour
     [SerializeField] public AudioSource somDano;
     public void Start()
     {
-        vida = 7;
+        vida = 15;
     }
 
     void Update()
     {
-        Debug.Log("vida do boss: " + vida);
+        //Debug.Log("vida do boss: " + vida);
     }
 
     public void ReceberDano()
@@ -57,6 +57,6 @@ public class inimigo : MonoBehaviour
 
     public void ReiniciarVida()
     {
-        this.vida = 7;
+        this.vida = 15;
     }
 }

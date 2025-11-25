@@ -7,11 +7,11 @@ public class telaMorteAnimação : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("status ");
-        Debug.Log(telaMorte.activeInHierarchy);
+        //Debug.Log("status ");
+        //Debug.Log(telaMorte.activeInHierarchy);
         if (telaMorte.activeInHierarchy)
         {
-            Debug.Log("caiu no if de ativo do script separado");
+            //Debug.Log("caiu no if de ativo do script separado");
             animator.Play("tela_morte");
         }
     }
