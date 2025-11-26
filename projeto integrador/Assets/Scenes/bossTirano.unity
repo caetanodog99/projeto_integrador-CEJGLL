@@ -4089,52 +4089,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 1
---- !u!1 &942878769
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 942878771}
-  - component: {fileID: 942878770}
-  m_Layer: 0
-  m_Name: animacaoMorte
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &942878770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 942878769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f217f8006de6a824693bd5cfb368344f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 2077031582}
-  telaMorte: {fileID: 1385370484}
---- !u!4 &942878771
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 942878769}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.9538577, y: -2.340252, z: -2.8908896}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &986659375
 GameObject:
   m_ObjectHideFlags: 0
@@ -4750,6 +4704,7 @@ MonoBehaviour:
   boss: {fileID: 1643978903}
   jogador: {fileID: 204359891}
   painelVoceMorreu: {fileID: 1385370484}
+  botaoPause: {fileID: 240810192}
   painelJoystick: {fileID: 1709072260}
   painelCoracoes: {fileID: 2014882231}
   somMorte: {fileID: 1385370490}
@@ -6393,7 +6348,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2077031581}
   - component: {fileID: 2077031583}
-  - component: {fileID: 2077031582}
   m_Layer: 0
   m_Name: vocemorreu
   m_TagString: Untagged
@@ -6410,34 +6364,12 @@ Transform:
   m_GameObject: {fileID: 2077031580}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -397.9803, y: -874.0958, z: -1.9766767}
-  m_LocalScale: {x: 2.7062395, y: 2.8560855, z: 2.8166523}
+  m_LocalPosition: {x: -398.21, y: -867.26, z: -1.9766767}
+  m_LocalScale: {x: 2.8158424, y: 2.917777, z: 2.8166523}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1385370488}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &2077031582
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2077031580}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 82d3caef1970cac43879767d3d76e6a6, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!212 &2077031583
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6482,7 +6414,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5884531632394636913, guid: 67bdae2e6736a0a43a9944077dce595a, type: 3}
+  m_Sprite: {fileID: -6506504035326930944, guid: c051b08a0bd156c45a96bba53e341236, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6855,4 +6787,3 @@ SceneRoots:
   - {fileID: 1385370488}
   - {fileID: 1790668819}
   - {fileID: 2014882235}
-  - {fileID: 942878771}
